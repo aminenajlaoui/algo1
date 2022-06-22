@@ -6,18 +6,18 @@ VAR
 BEGIN
 WHILE (sent[sent.length]<>'.') DO
     Read(c);
-    sent=sent+c;
-    i=i+1;
+    sent:=sent+c;
+    i:=i+1;
 END_WHILE
 FOR i FROM 0 TO sent.length-1  DO
-    IF (sent[i]=' ') THEN
-        nbw=nbw+1;
+    IF (sent[i]:=' ') THEN
+        nbw:=nbw+1;
     END_IF
-    IF (sent[i]='a' OR sent[i]='A' OR sent[i]='e' OR sent[i]='E' OR sent[i]='i' OR sent[i]='I' OR sent[i]='o' OR sent[i]='O' OR sent[i]='u' OR sent[i]='U' OR sent[i]='y' OR sent[i]='Y' OR) THEN
-        nbv=nbv+1;
+    IF (sent[i]:='a' OR sent[i]:='A' OR sent[i]:='e' OR sent[i]:='E' OR sent[i]:='i' OR sent[i]:='I' OR sent[i]:='o' OR sent[i]:='O' OR sent[i]:='u' OR sent[i]:='U' OR sent[i]:='y' OR sent[i]:='Y' OR) THEN
+        nbv:=nbv+1;
     END_IF
 END_FOR
-  len=len+sent.length;
+  len:=len+sent.length;
   Write("The length of the sentence :", len);
   Write("The number of words in the sentence :", nbw+1);
   Write("The number of vowels in the sentence :", nbv);
